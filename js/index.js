@@ -249,7 +249,7 @@ let navC = document.getElementsByTagName('a');
 
 navC[0].setAttribute('href', '#marvin'); 
 
-console.log(navC)
+//console.log(navC)
 
 //navD.setAttribute('type', 'button');
 
@@ -284,5 +284,18 @@ function tinyFunction (e){
 ctaimg.addEventListener('click', changePic);
 
 function changePic (e) {
-  document.ctaimg.setAttribute('src',"img/Marvin.png")
+  ctaimg.style.display = 'none'
+};
+
+
+let body = document.getElementsByTagName('body');
+
+
+
+body[0].addEventListener('click', click);
+
+
+function click(e) {
+  document.body.style.color = 'blue';
+  console.log(e);
 };
