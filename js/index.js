@@ -124,6 +124,8 @@ let button = document.querySelector('button');
 button.textContent = 'Get Started';
 
 
+
+
 // features h4
 
 let featuresH4 = document.querySelector('h4');
@@ -219,6 +221,44 @@ footer[8].textContent = 'Copyright Great Idea! 2018';
 
 
 
+
+
+// append 
+
+
+let aNew1 = document.createElement('a'); // 1
+
+//let newA = navCreate.appendChild('navNew');
+
+let navNewText = document.createTextNode('Marvins'); // 2
+
+ aNew1.appendChild(navNewText); // 3
+
+let newNav2 = document.getElementsByTagName('nav');
+
+newNav2[0].appendChild(aNew1); // 
+
+
+
+// prepend
+
+let navB = newNav2[0];
+navB.prepend(aNew1);
+
+let navC = document.getElementsByTagName('a');
+
+navC[0].setAttribute('href', '#marvin'); 
+
+console.log(navC)
+
+//navD.setAttribute('type', 'button');
+
+//setAttribute('type', 'button');
+
+
+
+
+
 // color change of navigation text
 
 
@@ -228,20 +268,21 @@ for (let i = 0; i < navColor.length; i++) {
   navColor[i].style.color = 'green'
 };
 
-// append 
+// event listener
 
 
-let navNew1 = document.createElement('a'); // 1
+button.addEventListener('click', tinyFunction);
 
-//let newA = navCreate.appendChild('navNew');
-
-let navNewText = document.createTextNode('Marvins'); // 2
-
- navNew1.appendChild(navNewText); // 3
-
-let newNav2 = document.getElementsByTagName('nav');
-
-let newNav3 = newNav2[0].appendChild(navNew1); // 
+function tinyFunction (e){
+  document.body.style.backgroundImage = "url('img/Marvin.png')";
+//document.body.style.backgroundColor = 'blue'
 
 
 
+};
+
+ctaimg.addEventListener('click', changePic);
+
+function changePic (e) {
+  document.ctaimg.setAttribute('src',"img/Marvin.png")
+};
