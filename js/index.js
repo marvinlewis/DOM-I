@@ -215,4 +215,33 @@ contactContent[7].textContent = 'sales@greatidea.io';
 
 let footer = document.getElementsByTagName('p');
 
-footer[8].textContent = 'Copyright Great Idea! 2018'
+footer[8].textContent = 'Copyright Great Idea! 2018';
+
+
+
+// color change of navigation text
+
+
+let navColor = document.querySelectorAll('a');
+
+for (let i = 0; i < navColor.length; i++) {
+  navColor[i].style.color = 'green'
+};
+
+// append 
+
+
+let navNew1 = document.createElement('a'); // 1
+
+//let newA = navCreate.appendChild('navNew');
+
+let navNewText = document.createTextNode('Marvins'); // 2
+
+ navNew1.appendChild(navNewText); // 3
+
+let newNav2 = document.getElementsByTagName('nav');
+
+let newNav3 = newNav2[0].appendChild(navNew1); // 
+
+
+
